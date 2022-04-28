@@ -1,14 +1,21 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import About from './components/About'
+import Home from './components/Home'
+import NewList from './components/NewList'
 import { Routes, Route } from "react-router-dom";
 
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        Wine O'Clock
-      </header>
+      <Header/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/newlist" element={<NewList/>}/>
+        </Routes>
     </div>
   );
 }

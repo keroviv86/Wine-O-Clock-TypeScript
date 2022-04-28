@@ -15,7 +15,7 @@
 .App-header {
   text-transform: uppercase;
   font-size: 40px;
-  margin: 30px 0;
+  /* margin: 30px 0; */
   color: rgb(89, 53, 53);
   z-index: 1; 
   /* z-index: 1 becasue we always want to be on the top */
