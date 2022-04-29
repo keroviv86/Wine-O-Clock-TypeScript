@@ -4,6 +4,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import WineBarIcon from '@mui/icons-material/WineBar';
 
 const Header = () => {
   return (
@@ -14,6 +15,7 @@ const Header = () => {
             <nav>
                 <Link to="/"><HomeOutlinedIcon/>Home</Link>
                 <Link to="/about"><PersonOutlinedIcon/>About</Link>
+                <Link to="/winelist"><WineBarIcon/>Wine List</Link>
                 <Link to="/newlist"><ListAltOutlinedIcon/>New List</Link>
                 <SearchOutlinedIcon/>
                 
