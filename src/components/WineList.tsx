@@ -1,6 +1,7 @@
 import React from "react";
 import { WineData } from "../model";
 import WineCard from "./WineCard";
+import './components.css'
 
 interface WineListProps {
   data: WineData[];
