@@ -19,6 +19,11 @@ const App: React.FC = () => {
     .then(data => setData(data))
   }, [])
 
+  function handleSubmit(newWineCardObj:any){
+    setData((prevData)=>[...prevData, newWineCardObj])
+  }
+
+  
 
   return (
     <div className="App">
@@ -26,7 +31,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
-          <Route path="/winelist" element={<WineList data={data}/>}/>
+          <Route path="/winelist" element={<WineList data={data} handleSubmit={handleSubmit}/>}/>
           <Route path="/newlist" element={<NewList/>}/>
         </Routes>
     </div>
