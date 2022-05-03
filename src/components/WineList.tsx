@@ -4,7 +4,7 @@ import WineCard from "./WineCard";
 import './components.css'
 
 interface WineListProps {
-  data: WineData[];
+    filteredItems: WineData[];
   handleSubmit: (newWineCardObj:any) => void;
 }
 
@@ -17,7 +17,7 @@ interface FormDataProps {
     Image: string;
 }
 
-const WineList: React.FC<WineListProps> = ({ data, handleSubmit }) => {
+const WineList: React.FC<WineListProps> = ({ filteredItems, handleSubmit }) => {
   const [form, setForm] = useState<boolean>(false)
   const [formData, setFormData] = useState<FormDataProps>({
       Name:"",
@@ -64,7 +64,7 @@ const WineList: React.FC<WineListProps> = ({ data, handleSubmit }) => {
     //       .then((data: any)=>console.log(data))
     //   })
   }
-  let cards = data.map((card) => (
+  let cards = filteredItems.map((card) => (
     <WineCard
       id={card.id}
       region={card.region}
@@ -80,7 +80,7 @@ const WineList: React.FC<WineListProps> = ({ data, handleSubmit }) => {
           <div>{cards}</div>
           {form ?
           <>
-           <button onClick = {handleForm}>Hide Form</button>
+           <button className = "form-button" onClick = {handleForm}>Hide Form</button>
             <form onSubmit= {submitForm}>
                 <label>Name <input type="text" name="Name" placeholder="name" onChange = {handleOnChange} value= {formData.Name}/></label> 
                 <label>Producer <input type="text" name="Producer" placeholder="producer" onChange = {handleOnChange} value= {formData.Producer}/></label> 

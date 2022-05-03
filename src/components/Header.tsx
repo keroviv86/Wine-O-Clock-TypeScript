@@ -6,13 +6,21 @@ import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import WineBarIcon from '@mui/icons-material/WineBar';
 
-const Header = () => {
+
+interface Props {
+  handleSearch: (input:string) => void
+}
+const Header: React.FC<Props> = ({handleSearch}) => {
   const[search, setSearch] = useState<boolean>(false)
 
   function onSearch(){
     setSearch((prevSearch)=>!prevSearch)
-    console.log(search)
   }
+
+  // function onHandleSearch(e){
+  //   console.log(e.target.value)
+
+  // }
   return (
     <div>
         <header className="App-header">
@@ -25,7 +33,7 @@ const Header = () => {
                 <Link to="/newlist"><ListAltOutlinedIcon/>New List</Link>
                 <SearchOutlinedIcon onClick={onSearch}/>
                 {search ?
-                <input type="text" placeholder="search"></input> :
+                <input type="text" placeholder="search" onChange={(e)=>handleSearch(e.target.value)}></input> :
                 <></>
                 }
                 

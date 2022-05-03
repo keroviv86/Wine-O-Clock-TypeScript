@@ -12,6 +12,7 @@ import { WineData } from './model';
 const App: React.FC = () => {
 
   const [data, setData] = useState<WineData[]>([])
+  const [search, setSearch] = useState<string>("")
 
   useEffect(()=> {
     fetch(" http://localhost:3000/wines")
@@ -23,15 +24,24 @@ const App: React.FC = () => {
     setData((prevData)=>[...prevData, newWineCardObj])
   }
 
-  
+  function handleSearch(input:string){
+    setSearch(input)
+  }
+
+  function handleFiltering(){
+   const filteredItems = data.filter((wine)=> (
+     wine.name.toLowerCase().includes(search.toLowerCase())
+   )) 
+   return filteredItems
+  }
 
   return (
     <div className="App">
-      <Header/>
+      <Header handleSearch={handleSearch}/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
-          <Route path="/winelist" element={<WineList data={data} handleSubmit={handleSubmit}/>}/>
+          <Route path="/winelist" element={<WineList filteredItems={handleFiltering()} handleSubmit={handleSubmit}/>}/>
           <Route path="/newlist" element={<NewList/>}/>
         </Routes>
     </div>
