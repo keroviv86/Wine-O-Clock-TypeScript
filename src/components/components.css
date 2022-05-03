@@ -76,3 +76,7 @@ form{
     margin: 2rem 0;
     background-color: rgba(236, 109, 74, 0.5);
 }
+
+label {
+    padding: 2rem 1rem;
+}
