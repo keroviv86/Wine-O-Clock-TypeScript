@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
@@ -7,6 +7,12 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import WineBarIcon from '@mui/icons-material/WineBar';
 
 const Header = () => {
+  const[search, setSearch] = useState<boolean>(false)
+
+  function onSearch(){
+    setSearch((prevSearch)=>!prevSearch)
+    console.log(search)
+  }
   return (
     <div>
         <header className="App-header">
@@ -17,7 +23,12 @@ const Header = () => {
                 <Link to="/about"><PersonOutlinedIcon/>About</Link>
                 <Link to="/winelist"><WineBarIcon/>Wine List</Link>
                 <Link to="/newlist"><ListAltOutlinedIcon/>New List</Link>
-                <SearchOutlinedIcon/>
+                <SearchOutlinedIcon onClick={onSearch}/>
+                {search ?
+                <input type="text" placeholder="search"></input> :
+                <></>
+                }
+                
                 
             </nav>
         </header>

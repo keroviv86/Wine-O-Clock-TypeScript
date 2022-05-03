@@ -68,7 +68,11 @@ button {
     color:#9d1d1d;
     text-align:center;
     transition: all 0.2s;
-   
+}
+
+.form-button {
+    position: absolute;
+    
 }
 
 form{
