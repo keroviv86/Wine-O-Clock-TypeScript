@@ -82,12 +82,17 @@ const WineList: React.FC<WineListProps> = ({ filteredItems, handleSubmit }) => {
           <div id="container">
            <button className = "form-button" onClick = {handleForm}>Hide Form</button>
             <form onSubmit= {submitForm}>
-                <label>Name <input type="text" name="Name" placeholder="name" onChange = {handleOnChange} value= {formData.Name}/></label> 
-                <label>Producer <input type="text" name="Producer" placeholder="producer" onChange = {handleOnChange} value= {formData.Producer}/></label> 
-                <label>Region <input type="text" name="Region" placeholder="region"onChange = {handleOnChange} value= {formData.Region}/></label>
-                <label>Country <input type="text" name="Country" placeholder="country" onChange = {handleOnChange} value= {formData.Country}/></label>
-                <label>Varietal <input type="text" name="Varietal" placeholder="varietal" onChange = {handleOnChange} value= {formData.Varietal}/></label>
-                <label>Image <input type="text" name="Image" placeholder="image url" onChange = {handleOnChange} value= {formData.Image}/></label>
+                <label>Name <input className="form-input" type="text" name="Name" placeholder="name" onChange = {handleOnChange} value= {formData.Name}/></label> 
+                <br/>
+                <label>Producer <input className="form-input" type="text" name="Producer" placeholder="producer" onChange = {handleOnChange} value= {formData.Producer}/></label> 
+                <br/>
+                <label>Region <input className="form-input" type="text" name="Region" placeholder="region"onChange = {handleOnChange} value= {formData.Region}/></label>
+                <br/>
+                <label>Country <input className="form-input" type="text" name="Country" placeholder="country" onChange = {handleOnChange} value= {formData.Country}/></label>
+                <br/>
+                <label>Varietal <input className="form-input"  type="text" name="Varietal" placeholder="varietal" onChange = {handleOnChange} value= {formData.Varietal}/></label>
+                <br/>
+                <label>Image <input className="form-input" type="text" name="Image" placeholder="image url" onChange = {handleOnChange} value= {formData.Image}/></label>
                 <button type="submit">Add Wine Card</button>
             </form> 
           </div>

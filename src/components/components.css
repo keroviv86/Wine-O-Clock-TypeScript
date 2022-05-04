@@ -59,6 +59,8 @@ p {
     color: #7f8c9b;
     line-height: 150%;
 }
+
+/* form */
 /* //button// */
 
 button {
@@ -76,8 +78,7 @@ button {
 }
 
 .form-button {
-    justify-content: center;
-    
+    margin-bottom: 2rem;
 }
 
 form{
@@ -86,6 +87,12 @@ form{
     background-color: rgba(236, 109, 74, 0.5);
 }
 
-label {
-    padding: 2rem 1rem;
+.form-input {
+    
 }
+
+label{
+    display: block;
+    /* float: left; */
+    width : 120px;    
+  }
