@@ -39,7 +39,7 @@ const App: React.FC = () => {
     <div className="App">
       <Header handleSearch={handleSearch}/>
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" element={<Home filteredItems={handleFiltering()}/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/winelist" element={<WineList filteredItems={handleFiltering()} handleSubmit={handleSubmit}/>}/>
           <Route path="/newlist" element={<NewList/>}/>

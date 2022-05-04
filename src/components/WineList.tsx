@@ -79,7 +79,7 @@ const WineList: React.FC<WineListProps> = ({ filteredItems, handleSubmit }) => {
       <div>
           <div>{cards}</div>
           {form ?
-          <>
+          <div id="container">
            <button className = "form-button" onClick = {handleForm}>Hide Form</button>
             <form onSubmit= {submitForm}>
                 <label>Name <input type="text" name="Name" placeholder="name" onChange = {handleOnChange} value= {formData.Name}/></label> 
@@ -90,12 +90,12 @@ const WineList: React.FC<WineListProps> = ({ filteredItems, handleSubmit }) => {
                 <label>Image <input type="text" name="Image" placeholder="image url" onChange = {handleOnChange} value= {formData.Image}/></label>
                 <button type="submit">Add Wine Card</button>
             </form> 
-          </>
+          </div>
             :
-            <>
-                <button onClick = {handleForm}>Add New Wine Card</button>
+            <div id="container">
+                <button onClick = {handleForm}  className = "form-button">Add New Wine Card</button>
             
-            </>
+            </div>
             } 
 
       </div>
