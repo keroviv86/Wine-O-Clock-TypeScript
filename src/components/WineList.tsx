@@ -5,7 +5,7 @@ import './components.css'
 
 interface WineListProps {
     filteredItems: WineData[];
-  handleSubmit: (newWineCardObj:any) => void;
+    handleSubmit: (newWineCardObj:any) => void;
 }
 
 interface FormDataProps {
