@@ -9,6 +9,11 @@
     margin-top: 10vh;
 }
 
+.about{
+    margin-top: 30vh;
+    text-align: center;
+}
+
 .card{
      /* Change background color */
     height: 200px;

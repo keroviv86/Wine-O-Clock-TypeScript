@@ -13,7 +13,7 @@ const App: React.FC = () => {
 
   const [data, setData] = useState<WineData[]>([])
   const [search, setSearch] = useState<string>("")
-
+  console.log(data)
   useEffect(()=> {
     fetch(" http://localhost:3000/wines")
     .then(res=>res.json())
