@@ -49,7 +49,9 @@
       border-radius: 12px;
 }
 .flash-card-button{
-    align-center: center;
+    margin-left: 20px;
+    margin-top: 80px;
+    border-radius: 20px;
 }
 .img{
     width: 80px;

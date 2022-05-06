@@ -23,8 +23,8 @@ const FlashCards: React.FC<WineData> = ({
                     <p className = "varietal">{varietal}</p>
                     <p className = "producer">{producer}</p>
                 </div>
-                <button><CheckIcon/></button>
-                <button><CloseIcon/></button>
+                <button className = "flash-card-button"><CheckIcon/></button>
+                <button className = "flash-card-button"><CloseIcon/></button>
                 
                
       </div>

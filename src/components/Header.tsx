@@ -27,10 +27,10 @@ const Header: React.FC<Props> = ({handleSearch}) => {
          <h1 className = "title">Wine O'Clock </h1>
 
             <nav>
-                <Link to="/"><HomeOutlinedIcon/>Home</Link>
                 <Link to="/about"><PersonOutlinedIcon/>About</Link>
+                <Link to="/"><HomeOutlinedIcon/>Home</Link>
                 <Link to="/winelist"><WineBarIcon/>Wine List</Link>
-                <Link to="/newlist"><ListAltOutlinedIcon/>New List</Link>
+                <Link to="/studylist"><ListAltOutlinedIcon/>Study List</Link>
                 <SearchOutlinedIcon onClick={onSearch}/>
                 {search ?
                 <input type="text" placeholder="search" onChange={(e)=>handleSearch(e.target.value)}></input> :

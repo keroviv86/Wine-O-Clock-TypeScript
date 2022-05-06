@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import About from './components/About'
 import Home from './components/Home'
-import NewList from './components/NewList'
+import StudyList from './components/StudyList'
 import WineList from './components/WineList'
 import { Routes, Route } from "react-router-dom";
 import { WineData } from './model';
@@ -42,7 +42,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home filteredItems={handleFiltering()}/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/winelist" element={<WineList filteredItems={handleFiltering()} handleSubmit={handleSubmit}/>}/>
-          <Route path="/newlist" element={<NewList/>}/>
+          <Route path="/studylist" element={<StudyList/>}/>
         </Routes>
     </div>
   );
