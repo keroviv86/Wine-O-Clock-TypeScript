@@ -3,14 +3,19 @@ import { WineData } from "../model";
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 
-const FlashCards: React.FC<WineData> = ({
+interface FlashCardProps extends WineData {
+  handleCheckCard: () => void;
+}
+const FlashCards: React.FC<FlashCardProps> = ({
   id,
   region,
   country,
   varietal,
   name,
   image,
-  producer
+  producer,
+  handleCheckCard
+
   }) => {
   return (
     <div id="flash-container">
@@ -23,7 +28,7 @@ const FlashCards: React.FC<WineData> = ({
                     <p className = "varietal">{varietal}</p>
                     <p className = "producer">{producer}</p>
                 </div>
-                <button className = "flash-card-button"><CheckIcon/></button>
+                <button className = "flash-card-button" onClick={handleCheckCard}><CheckIcon/></button>
                 <button className = "flash-card-button"><CloseIcon/></button>
                 
                

@@ -4,11 +4,13 @@ import FlashCards from "./FlashCards"
 
 interface WineListProps {
   filteredItems: WineData[];
+  displayArr: WineData[];
+  handleCheckCard: () => void;
 
 }
 
-const Home: React.FC<WineListProps> = ({filteredItems}) => {
-  let cards = filteredItems.map((card) => (
+const Home: React.FC<WineListProps> = ({displayArr,handleCheckCard}) => {
+  let cards = displayArr.map((card) => (
     <FlashCards
       id={card.id}
       region={card.region}
@@ -17,6 +19,7 @@ const Home: React.FC<WineListProps> = ({filteredItems}) => {
       name={card.name}
       producer={card.producer}
       image={card.image}
+      handleCheckCard={handleCheckCard}
     />
   ));
   return (

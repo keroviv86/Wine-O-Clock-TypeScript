@@ -13,7 +13,9 @@ const App: React.FC = () => {
 
   const [data, setData] = useState<WineData[]>([])
   const [search, setSearch] = useState<string>("")
-  console.log(data)
+  // SwipeButton Functionality
+  const [position, setPosition]= useState<number>(0)
+
   useEffect(()=> {
     fetch(" http://localhost:3000/wines")
     .then(res=>res.json())
@@ -35,11 +37,22 @@ const App: React.FC = () => {
    return filteredItems
   }
 
+  const displayArr = [data[position]]
+
+  function handleCheckCard() {
+    setPosition((prevPosition)=>(prevPosition+1) % data.length)
+  }
+
   return (
     <div className="App">
       <Header handleSearch={handleSearch}/>
         <Routes>
-          <Route path="/" element={<Home filteredItems={handleFiltering()}/>}/>
+          <Route path="/" element={<Home 
+            filteredItems={handleFiltering()}
+           displayArr={displayArr}
+           handleCheckCard={handleCheckCard}
+
+           />}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/winelist" element={<WineList filteredItems={handleFiltering()} handleSubmit={handleSubmit}/>}/>
           <Route path="/studylist" element={<StudyList/>}/>
