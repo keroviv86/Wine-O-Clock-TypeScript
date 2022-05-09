@@ -28,7 +28,7 @@ const FlashCards: React.FC<FlashCardProps> = ({
                     <p className = "varietal">{varietal}</p>
                     <p className = "producer">{producer}</p>
                 </div>
-                <p>Did you get the question right?</p>
+                <h5 style={{fontSize:16, marginTop:80}}>Did you get the question right?</h5>
                 <button className = "flash-card-button" onClick={handleCheckCard}><CheckIcon/></button>
                 <button className = "flash-card-button"><CloseIcon/></button>
                 
