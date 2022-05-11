@@ -31,8 +31,6 @@ const FlashCards: React.FC<FlashCardProps> = ({
                 <h5 style={{fontSize:16, marginTop:80}}>Did you get the question right?</h5>
                 <button className = "flash-card-button" onClick={handleCheckCard}><CheckIcon/></button>
                 <button className = "flash-card-button"><CloseIcon/></button>
-                
-               
       </div>
     </div>
   )
