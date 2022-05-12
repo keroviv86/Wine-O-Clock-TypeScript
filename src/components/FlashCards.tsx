@@ -2,6 +2,7 @@ import React from 'react'
 import { WineData } from "../model";
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 interface FlashCardProps extends WineData {
   handleCheckCard: () => void;
@@ -32,6 +33,8 @@ const FlashCards: React.FC<FlashCardProps> = ({
                 <button className = "flash-card-button" onClick={handleCheckCard}><CheckIcon/></button>
                 {/* if user clicks on closed add card to "restudy pile" */}
                 <button className = "flash-card-button"><CloseIcon/></button>
+                <button className = "flash-card-button"><ArrowBackIcon/></button>
+
       </div>
     </div>
   )
