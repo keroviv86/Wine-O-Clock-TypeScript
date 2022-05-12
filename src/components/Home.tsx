@@ -6,10 +6,11 @@ interface WineListProps {
   filteredItems: WineData[];
   displayArr: WineData[];
   handleCheckCard: () => void;
+  handleReverse: () => void;
 
 }
 
-const Home: React.FC<WineListProps> = ({displayArr,handleCheckCard}) => {
+const Home: React.FC<WineListProps> = ({displayArr,handleCheckCard, handleReverse}) => {
   let cards = displayArr.map((card) => (
     <FlashCards
       id={card.id}
@@ -20,6 +21,7 @@ const Home: React.FC<WineListProps> = ({displayArr,handleCheckCard}) => {
       producer={card.producer}
       image={card.image}
       handleCheckCard={handleCheckCard}
+      handleReverse={handleReverse}
     />
   ));
   return (

@@ -43,6 +43,11 @@ const App: React.FC = () => {
     setPosition((prevPosition)=>(prevPosition+1) % data.length)
   }
 
+  function handleReverse() {
+    setPosition((prevPosition)=>(prevPosition-1) % data.length)
+  }
+  console.log(position)
+
   return (
     <div className="App">
       <Header handleSearch={handleSearch}/>
@@ -51,6 +56,7 @@ const App: React.FC = () => {
             filteredItems={handleFiltering()}
            displayArr={displayArr}
            handleCheckCard={handleCheckCard}
+           handleReverse={handleReverse}
 
            />}/>
           <Route path="/about" element={<About/>}/>

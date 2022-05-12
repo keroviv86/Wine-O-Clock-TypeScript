@@ -6,6 +6,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 interface FlashCardProps extends WineData {
   handleCheckCard: () => void;
+  handleReverse: () => void;
 }
 const FlashCards: React.FC<FlashCardProps> = ({
   id,
@@ -15,7 +16,8 @@ const FlashCards: React.FC<FlashCardProps> = ({
   name,
   image,
   producer,
-  handleCheckCard
+  handleCheckCard,
+  handleReverse
 
   }) => {
   return (
@@ -32,8 +34,8 @@ const FlashCards: React.FC<FlashCardProps> = ({
                 <h5 style={{fontSize:16, marginTop:80}}>Did you get the question right?</h5>
                 <button className = "flash-card-button" onClick={handleCheckCard}><CheckIcon/></button>
                 {/* if user clicks on closed add card to "restudy pile" */}
-                <button className = "flash-card-button"><ArrowBackIcon/></button>
-                <button className = "flash-card-button"><CloseIcon/></button>
+                <button className = "flash-card-button" onClick={handleReverse} ><ArrowBackIcon/></button>
+                <button className = "flash-card-button" ><CloseIcon/></button>
                
 
       </div>
