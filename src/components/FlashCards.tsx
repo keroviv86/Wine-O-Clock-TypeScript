@@ -31,7 +31,7 @@ const FlashCards: React.FC<FlashCardProps> = ({
                     <p className = "varietal">{varietal}</p>
                     <p className = "producer">{producer}</p>
                 </div>
-                <h5 style={{fontSize:16, marginTop:80}}>Did you get the question right?</h5>
+                <h5 style={{fontSize:16, marginTop:80}}>Did you answer correctly?</h5>
                 <button className = "flash-card-button" onClick={handleCheckCard}><CheckIcon/></button>
                 {/* if user clicks on closed add card to "restudy pile" */}
                 <button className = "flash-card-button" onClick={handleReverse} ><ArrowBackIcon/></button>
