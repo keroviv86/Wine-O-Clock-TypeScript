@@ -57,7 +57,6 @@ const App: React.FC = () => {
            displayArr={displayArr}
            handleCheckCard={handleCheckCard}
            handleReverse={handleReverse}
-
            />}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/winelist" element={<WineList filteredItems={handleFiltering()} handleSubmit={handleSubmit}/>}/>
